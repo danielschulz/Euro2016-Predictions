@@ -1,7 +1,6 @@
 
 # EDA
 
-
 topDf = subset(df, df$prob > 0.075)
 plotTopTeam = ggplot(data = topDf, aes(x=reorder(team, prob), y=prob, fill=cluster)) + 
   xlab("") + 
@@ -12,7 +11,7 @@ plotTopTeam = ggplot(data = topDf, aes(x=reorder(team, prob), y=prob, fill=clust
   ggtitle("4 Top Teams as of Euro 2016") + 
   theme(legend.position="none") + 
   geom_hline(yintercept = median(topDf$prob), colour="darkgrey")
-plotTopTeam
+print(plotTopTeam)
 
 aaDf = subset(df, df$prob > quantile(df$prob, probs = c(.5)))
 plotAaTeam = ggplot(data = aaDf, aes(x=reorder(team, prob), y=prob, fill=cluster)) + 
@@ -24,7 +23,7 @@ plotAaTeam = ggplot(data = aaDf, aes(x=reorder(team, prob), y=prob, fill=cluster
   ggtitle("Above-average, top 50% Teams as of Euro 2016") + 
   theme(legend.position="none") + 
   geom_hline(yintercept = median(aaDf$prob), colour="darkgrey")
-plotAaTeam
+print(plotAaTeam)
 
 grid.arrange(plotTopTeam, plotAaTeam, ncol=1)
 
@@ -40,7 +39,7 @@ plotAllTeams = ggplot(data = df, aes(x=reorder(team, prob), y=prob, fill=cluster
   ggtitle("All Teams as of Euro 2016") + 
   theme(legend.position="none") + 
   geom_hline(yintercept = median(df$prob), colour="darkgrey")
-plotAllTeams
+print(plotAllTeams)
 
 
 # odds France wins against Portugal
