@@ -84,4 +84,4 @@ matchOutcomes = addMatch("France", "Iceland", 5, 2)
 
 matchOutcomes = addMatch("Portugal", "Wales", 2, 0)
 matchOutcomes = addMatch("Germany", "France", 0, 2)
-# matchOutcomes = addMatch("Portugal", "France", 0, 0)
+matchOutcomes = addMatch("Portugal", "France", 1, 0)

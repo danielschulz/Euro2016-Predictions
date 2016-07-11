@@ -8,7 +8,7 @@ plotTopTeam = ggplot(data = topDf, aes(x=reorder(team, prob), y=prob, fill=clust
   geom_bar(stat="identity") + 
   coord_flip() + 
   scale_fill_manual(values=capgeminiColors) +
-  ggtitle("4 Top Teams as of Euro 2016") + 
+  ggtitle("Top 5 Teams as of Euro 2016") + 
   theme(legend.position="none") + 
   geom_hline(yintercept = median(topDf$prob), colour="darkgrey")
 print(plotTopTeam)
